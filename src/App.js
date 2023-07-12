@@ -2,13 +2,15 @@ import "./App.css";
 import React, { useState } from "react";
 import axios from "axios";
 
-const api_key = "f06ad9ab2b36a58bf792a9eb2f58fcaa";
+const api_key = process.env.REACT_APP_API_KEY;
+
 function App() {
   const [query, setQuery] = useState("");
   const [data, setData] = useState(undefined);
-
+  
   const HandleEnter = async (e) => {
     if (e.key === "Enter") {
+      console.log(api_key);
       if (query.trim() !== "") {
         try {
           const response = await axios.get(
