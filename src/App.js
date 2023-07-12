@@ -92,7 +92,7 @@ function App() {
               <div className="temp">
                 <p>{Math.floor(data.main.temp)} &deg;C</p>
               </div>
-              <p className="weather-type">Clouds</p>{" "}
+              <p className="weather-type">{ data.weather[0].main}</p>{" "}
             </div>
           ) : (
             " "
