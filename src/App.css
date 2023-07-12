@@ -1,38 +1,99 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  font-size: 1.1rem;
+}
 .App {
-  text-align: center;
+  background-color: #313131;
+  transition: 0.5s ease;
 }
+.App-warm {
+  background-image: url(./Assets/warm-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  transition: 0.5s ease;
 }
+main {
+  height: 100vh;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 0 25px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
 }
-
-.App-link {
-  color: #61dafb;
+.App-cold {
+  background-image: url(./Assets/cold-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s ease;
 }
+.search-box {
+  width: 300px;
+}
+.search-bar {
+  outline: none;
+  appearance: none;
+  width: 100%;
+  border: none;
+  padding: 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px 0px 16px 16px;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: #313131;
+  font-size: 20px;
+
+  transition: 0.6s ease;
+}
+.search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.location-box {
+  margin-top: 100px;
+}
+.location-box .location {
+  color: snow;
+  font-size: 2rem;
+  font-weight: 500;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+.location-box .date {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+.temp {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0.8em 0;
+  padding: 1em 0.8em;
+  display: inline-block;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+.weather-type {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 4px 4px rgba(50, 50, 70, 0.5);
 }
